@@ -1,0 +1,68 @@
+.open {
+  position: fixed;
+  z-index: 10;
+  top: 10px;
+  right: 10px;
+  border: 1px solid #3D4F80;
+  border-radius: 5px;
+  padding: 10px 26px;
+  background-color: white;
+}
+
+.open.active {
+  display: none;
+}
+
+.modal:not(.active) {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.86);
+
+  .close {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 30px;
+    padding: 10px 26px;
+    border: 1px solid #3D4F80;
+  }
+
+  .form {
+    min-height: 300px;
+    height: 50vh;
+    min-width: 300px;
+    max-width: 553px;
+    width: 80vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 0 0 10px 10px;
+    border-top: solid 5px #627fce;
+    background-image: url("../../../assets/kisspng-league-of-legends-desktop-wallpaper-game-clip-art-champion-5abfe65be3a342.9522863015225257879324.png") ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  input {
+    border: 1px solid #3D4F80;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+  }
+}

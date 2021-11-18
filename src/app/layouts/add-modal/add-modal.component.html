@@ -1,0 +1,9 @@
+<input type="button" class="open" [class.active]="isActive" value="Nouveau personnage" (click)="activeModal()">
+
+<div class="modal" [class.active]="isActive">
+  <input type="button" value="Fermer" class="close" (click)="activeModal()">
+  <div class="form">
+    <input type="text" #title placeholder="Nom du personnage">
+    <input type="button" value="Ajouter" (click)="add(title.value)">
+  </div>
+</div>
