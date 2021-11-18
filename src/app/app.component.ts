@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Character} from "./models/Character";
 import {LolService} from "./services/lol.service";
+import {Notifications} from "./models/Notifications";
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import {LolService} from "./services/lol.service";
 })
 export class AppComponent {
   characters: Character[] = [];
+  notifications: Notifications[] = [];
   isModal: boolean = false;
 
   constructor(private lolService: LolService) {
@@ -19,17 +21,13 @@ export class AppComponent {
     this.getCharacters();
   }
 
-  activeModal = (): void => {
-
-  }
-
   getCharacters = (): void => {
     this.lolService.characterStream.subscribe(
       data => {
         this.characters = data;
       },
       err => {
-        console.error(err);
+        this.notifications.push(new Notifications("Impossible de récupérer les personnages", "error"));
       }
     );
   }
@@ -38,28 +36,40 @@ export class AppComponent {
     let newCharacter = new Character(character);
 
     this.lolService.addCharacter(newCharacter).subscribe(data => {
-        this.lolService.getCharacter()
+        this.lolService.getCharacter();
+        this.notifications.push(new Notifications("Le personnage a été ajouté avec succès", "success"));
       },
-      err => console.error(err)
+      err => {
+        this.notifications.push(new Notifications("Impossible de supprimer le personnage", "error"));
+      }
     )
-
   }
 
   delete = (data: number): void => {
     this.lolService.deleteCharacter(data).subscribe(
       data => {
-        this.lolService.getCharacter()
+        this.lolService.getCharacter();
+        this.notifications.push(new Notifications("Le personnage a été supprimé avec succès", "success"));
       },
-      err => console.error(err)
+      err => {
+        this.notifications.push(new Notifications("Impossible de supprimer le personnage", "error"));
+      }
     )
   }
 
   change = (data: Character): void => {
     this.lolService.changeState(data).subscribe(
       data => {
-        this.lolService.getCharacter()
+        this.lolService.getCharacter();
+        this.notifications.push(new Notifications("Le status a été changé avec succès", "success"));
       },
-      err => console.error(err)
+      err => {
+        this.notifications.push(new Notifications("Impossible de changer le status du personnage", "error"));
+      }
     )
+  }
+
+  deleteNotifs = (index: number): void => {
+    this.notifications.splice(index, 1);
   }
 }

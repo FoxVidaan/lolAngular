@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { CardsComponent } from './components/cards/cards.component';
 import {HttpClientModule} from "@angular/common/http";
 import { AddModalComponent } from './layouts/add-modal/add-modal.component';
+import { NotificationsComponent } from './components/notifications/notifications.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardsComponent,
-    AddModalComponent
+    AddModalComponent,
+    NotificationsComponent
   ],
   imports: [
     BrowserModule,

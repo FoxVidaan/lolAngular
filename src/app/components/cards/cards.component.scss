@@ -10,7 +10,6 @@
   display: flex;
   align-content: center;
   justify-content: center;
-  cursor: pointer;
 
   &:not(.active) {
     filter: brightness(0.3);
@@ -30,6 +29,7 @@
   }
 
   .title {
+    cursor: pointer;
     width: 110px;
     color: white;
     //font-weight: bold;

@@ -4,8 +4,12 @@
   font-family: 'Roboto', sans-serif;
 }
 
+p {
+  font-size: 0.8em;
+  margin-top: 60px;
+}
+
 app-cards {
-  margin-top: 70px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;

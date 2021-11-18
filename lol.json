@@ -2,39 +2,6 @@
   "Characters": [
     {
       "tags": [
-        "Fighter",
-        "Tank"
-      ],
-      "title": "the Monkey King",
-      "id": 62,
-      "key": "MonkeyKing",
-      "name": "Wukong",
-      "active": true
-    },
-    {
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
-      "title": "Grandmaster at Arms",
-      "id": 24,
-      "key": "Jax",
-      "name": "Jax",
-      "active": true
-    },
-    {
-      "tags": [
-        "Mage",
-        "Support"
-      ],
-      "title": "the Harbinger of Doom",
-      "id": 9,
-      "key": "Fiddlesticks",
-      "name": "Fiddlesticks",
-      "active": true
-    },
-    {
-      "tags": [
         "Assassin"
       ],
       "title": "the Demon Jester",
@@ -73,17 +40,6 @@
       "id": 76,
       "key": "Nidalee",
       "name": "Nidalee",
-      "active": true
-    },
-    {
-      "tags": [
-        "Mage",
-        "Support"
-      ],
-      "title": "Rise of the Thorns",
-      "id": 143,
-      "key": "Zyra",
-      "name": "Zyra",
       "active": true
     },
     {

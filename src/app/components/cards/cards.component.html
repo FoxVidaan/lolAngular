@@ -1,6 +1,6 @@
-<div class="card" [class.active]="character.active"  *ngFor="let character of data" (click)="changeActive(character)">
+<div class="card" [class.active]="character.active"  *ngFor="let character of data" >
   <input type="button" value="-" class="remove" (click)="delete(character.id)">
-  <span class="title">
+  <span class="title" (click)="changeActive(character)">
     {{character.title}}
   </span>
 </div>

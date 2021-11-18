@@ -1,0 +1,23 @@
+.notification {
+  position: relative;
+  padding: 5px 25px;
+  cursor: pointer;
+
+  .close {
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    text-align: center;
+  }
+
+  &.success {
+    background-color: #84ff96;
+  }
+
+  &.error {
+    background-color: #963232;
+  }
+}

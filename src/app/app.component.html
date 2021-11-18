@@ -1,2 +1,4 @@
-<app-add-modal (addCharacter)="add($event)"></app-add-modal>
+<p>Cliquez sur le nom du personnage pour l'activer ou le désactiver</p>
+<app-notifications [notifications]="notifications" (closeNotif)="deleteNotifs($event)"></app-notifications>
 <app-cards [data]="characters" (deleteChar)="delete($event)" (changeChar)="change($event)"></app-cards>
+<app-add-modal (addCharacter)="add($event)"></app-add-modal>
